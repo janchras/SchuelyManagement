@@ -1,0 +1,3 @@
+# SchuelyManagement
+Just a school project. But not for the first time again, spending way too much time on it...
+
