@@ -1,0 +1,6 @@
+#ifndef SCHUELYMANAGEMENT_STRINGS_H
+#define SCHUELYMANAGEMENT_STRINGS_H
+
+void string_schuelies_einlesen();
+
+#endif //SCHUELYMANAGEMENT_STRINGS_H
