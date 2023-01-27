@@ -13,10 +13,10 @@ char* getString() {
     return buffer;
 }
 
-void readString(char text[], char* adresse) {
+void readString(char text[], char* destination) {
     printf("%s ", text);
     char* buffer = getString();
-    strcpy(adresse, buffer);
+    strcpy(destination, buffer);
     free(buffer);
 }
 
@@ -25,4 +25,9 @@ void readInt(char text[], int lowerLimit, int upperLimit, int* adresse) {
     *adresse = value;
 }
 
+void initString(char* str, size_t size) {
+    for (int i = 0; i < size; i++) {
+        str[i] = '\0';
+    }
+}
 

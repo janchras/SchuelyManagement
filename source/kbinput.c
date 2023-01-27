@@ -4,7 +4,6 @@
 int getInteger(char text[],int lower_limit,int upper_limit)
 {
     int intValue;
-    int scanf_var = 0;
     char s[80];
     do
     {
