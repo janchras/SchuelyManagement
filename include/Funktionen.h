@@ -1,13 +1,17 @@
 #ifndef FUNKTIONEN_H_INCLUDED
 #define FUNKTIONEN_H_INCLUDED
+#define MaxChar_name    40
+#define MaxChar_zweig   20
+#define MaxChar_email   40
+
 
 struct schuely
 {
-    char name[30];
-    char zweig[10];
+    char name[MaxChar_name];
+    char zweig[MaxChar_zweig];
     int alter;
     int geburtsmonat;
-    char email[40];
+    char email[MaxChar_email];
 };
 
 struct Eintrag

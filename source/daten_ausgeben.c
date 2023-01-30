@@ -4,6 +4,7 @@
 #include "strings.h"
 #include <windows.h>
 #include "kbinput.h"
+#include "utils.h"
 
 void Profil_ausgeben(struct schuely* x)
 {
@@ -44,6 +45,7 @@ void call_Profil_ausgeben(struct schuely* eingelesene_schuelies, int schuely_amo
             string_schuelies_einlesen();
             break;
     }
+    hitEnterToContinue();
 }
 
 

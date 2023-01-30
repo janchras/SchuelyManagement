@@ -9,6 +9,7 @@
 
 int Menu()
 {
+    system("cls");
     Sleep(PRINT_DELAY_HOME);
     printf(" _____               \n");
     printf("|  |  |___ _____ ___ \n");
@@ -33,11 +34,11 @@ int Menu()
 
 void Profil_initialisieren(struct schuely* x)
 {
-    x->name[0]='\0';
-    x->zweig[0]='\0';
+    initString(x->name, MaxChar_name);
+    initString(x->zweig, MaxChar_zweig);
     x->alter=0;
     x->geburtsmonat=0;
-    x->email[0]='\0';
+    initString(x->email, MaxChar_email);
 }
 
 
@@ -60,4 +61,5 @@ void schuely_erstellen(struct schuely** schuelies, int schuely_amount)
     realloc(*schuelies, ++schuely_amount*sizeof(struct schuely));
     Profil_initialisieren(&(*schuelies)[schuely_amount -1]);
     Profil_erstellen(&(*schuelies)[schuely_amount-1]);
+    hitEnterToContinue();
 }

@@ -31,3 +31,10 @@ void initString(char* str, size_t size) {
     }
 }
 
+void hitEnterToContinue()
+{
+    fflush(stdin);
+    printf("\nHit enter to continue.");
+    getchar();
+}
+

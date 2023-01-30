@@ -32,16 +32,6 @@ void read_str_from_string(char* dest, char* source, char** p)
     source[source_length] = '\0';
     strncpy(dest, source, source_length);
     *p = p_end + 1;
-
-    /*
-    size_t i = 0;
-    while (source[i] != ';' && source[i] != '\0') {
-        dest[i] = source[i];
-        i++;
-    }
-    dest[i] = '\0';
-    *p = &source[i];
-    */
 }
 
 
@@ -76,6 +66,7 @@ void read_int_from_string(int* dest_int, char* source, char** p_end)
 
 void read_schuely_from_string(struct schuely* string_schuelies, char* source)
 {
+    Profil_initialisieren(string_schuelies);
     read_str_from_string(string_schuelies->name, source, &source);
     read_str_from_string(string_schuelies->zweig, source, &source);
     read_int_from_string(&string_schuelies->alter, source, &source);
